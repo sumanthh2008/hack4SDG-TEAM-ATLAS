@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #5FB8B0;
+    --primary-dark: #2B7871;
+    --primary-light: #8CD3CC;
+    --primary-surface: #EBF8F6;
+    
+    --mint: #CDEBDD;
+    --mint-light: #F0FAF5;
+    --mint-dark: #2A6A50;
+
+    --sky: #BFE3F2;
+    --sky-light: #F1F9FD;
+    --sky-dark: #256E96;
+
+    --sage: #8FA89B;
+    --coral: #F07167;
+    --coral-surface: #FFF2F1;
+    --coral-dark: #B8382F;
+
+    --bg-page: #F7FBFA;
+    --card-bg: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F7FBFA;
+    color: #1E293B;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Nunito', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Soothing Glassmorphism and Shadows */
+.sankalp-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(205, 235, 221, 0.45);
+}
+
+.sankalp-glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(95, 184, 176, 0.15);
+  box-shadow: 0 12px 36px -8px rgba(95, 184, 176, 0.10), 0 4px 12px -2px rgba(30, 41, 59, 0.04);
+}
+
+.sankalp-shadow {
+  box-shadow: 0 10px 30px -6px rgba(95, 184, 176, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+}
+
+.sankalp-shadow-lg {
+  box-shadow: 0 20px 45px -10px rgba(95, 184, 176, 0.16), 0 8px 20px -4px rgba(15, 23, 42, 0.04);
+}
+
+.sankalp-glow {
+  box-shadow: 0 0 25px -4px rgba(95, 184, 176, 0.4);
+}
+
+.sankalp-coral-glow {
+  box-shadow: 0 0 24px -2px rgba(240, 113, 103, 0.45);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F0FAF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #B4DDD6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5FB8B0;
+}
+
+/* Blur video filter utility */
+.video-blur-patient {
+  filter: blur(18px) saturate(0.85);
+  transition: filter 0.4s ease-in-out;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
